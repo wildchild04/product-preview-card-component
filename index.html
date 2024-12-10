@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#F2EAE2',
+            aurometal: '#6C7289',
+            gunmetal: '#1C232B',
+            aquamarine: '#3D8168',
+            'aquamarine-hover': '#1A4032'
+          },
+          fontFamily: {
+            'fraunces': ['Fraunces'],
+            'montserrat': ['Montserrat']
+          },
+          fontSize: {
+            'h1': ['32px', '32px'],
+            'body': ['14px', '23px'],
+          },
+          content: {
+            'cart': 'url("./images/icon-cart.svg")'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-cream">
+
+  <main class="pt-7 px-4 md:p-0">
+
+    <div
+      class="w-[343px] h-[611px] rounded-[10px] bg-white md:w-[600px] md:h-[450px] absolute md:top-1/2 left-1/2 md:translate-y-[-50%] translate-x-[-50%]">
+
+      <div class="md:grid md:grid-cols-2">
+        <picture>
+          <source srcset="./images/image-product-desktop.jpg" , media="(min-width: 768px)">
+          <source srcset="./images/image-product-mobile.jpg" , media="(max-width: 768px)">
+          <img class="md:w-[300px] md:h-[450px md:rounded-l-[10px] md:rounded-r-none rounded-t-[10px]"
+            src="./images/image-product-desktop.jpg" alt="product" />
+        </picture>
+        <div class="md:p-8 p-6">
+          <h5 class="font-montserrat font-medium text-xs text-aurometal">P E R F U M E</h5>
+
+          <h1 class="font-fraunces font-bold text-h1 text-gunmetal pt-3 md:pt-5">Gabrielle Essence Eau De Parfum</h1>
+
+          <p class="font-montserrat font-medium text-body text-aurometal pt-4 md:pt-6">
+            A floral, solar and voluptuous interpretation composed by Olivier Polge,
+            Perfumer-Creator for the House of CHANEL.
+          </p>
+
+          <div class="pt-6 grid gap-5 grid-cols-2 items-center md:pt-7">
+            <strong class="font-fraunces text-h1 text-aquamarine">$149.99</strong>
+            <s class="md:ps-5 font-montserrat text-aurometal">$169.99</s>
+          </div>
+          <div class="pt-5 md:pt-8">
+            <button
+              class="w-[295px] md:w-[236px] h-12 bg-aquamarine hover:bg-aquamarine-hover font-montserrat text-white font-bold text-body flex items-center justify-center rounded-lg gap-3"
+              type="button">
+              <img src="images/icon-cart.svg" class="w-[14.39px] h-4">
+              <p class="">Add to Cart</p>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/wildchild04">wildchild</a>.
+  </div>
+</body>
+
+</html>
